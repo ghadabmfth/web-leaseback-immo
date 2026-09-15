@@ -1,25 +1,60 @@
-# CODING AGENTS: READ THIS FIRST
+# leaseback.immo
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Site vitrine de **leaseback.immo** (Bluelease) — refinancement immobilier professionnel :
+crédit-bail immobilier et fiducie-sûreté.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+Next.js (App Router) + TypeScript, sans framework CSS ni bibliothèque de composants.
 
-## What you should do — IMPORTANT
+## Démarrer
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+```bash
+npm install
+npm run dev        # http://localhost:3000
+```
 
-**Read `project/Site leaseback.immo.dc.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+| Script              | Rôle                                   |
+| ------------------- | -------------------------------------- |
+| `npm run dev`       | serveur de développement               |
+| `npm run build`     | build de production (tout est statique) |
+| `npm run start`     | sert le build de production            |
+| `npm run lint`      | ESLint (`next/core-web-vitals`)        |
+| `npm run typecheck` | `tsc --noEmit`                         |
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+## Arborescence
 
-## About the design files
+```
+app/
+  layout.tsx                 en-tête + pied de page, police Archivo, métadonnées globales
+  globals.css                jetons du design system + règles de page (source unique du style)
+  (site)/…                   pages qui se terminent par la bande « Test d’éligibilité »
+  (bare)/eligibilite|contact pages de conversion (pas de bande finale)
+  not-found.tsx              404
+  sitemap.ts / robots.ts
+components/
+  site/                      en-tête (méga-menu, tiroir, compaction au scroll), pied de page, CTA
+  ui/                        Logo, Icon (glyphes de marque), Fa (glyphes Font Awesome inlinés),
+                             Button, Pill, SectionHeading, Eyebrow, ScrollReveal, FloatIcons
+  home/HeroSimulator         simulateur de refinancement du hero
+  faq/FaqAccordion           accordéon des questions fréquentes
+  blog/PostList              recherche + filtre par rubrique
+  contact/ContactForm        formulaire de contact (validation côté client)
+  eligibilite/…              test d’éligibilité en 7 étapes
+lib/
+  routes.ts  faq.ts  posts.ts  eligibility.ts  fa-glyphs.ts
+public/img/                  photographies et illustrations
+```
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+Le formulaire de contact et le test d’éligibilité sont **entièrement côté client** : aucune
+requête réseau n’est émise, la soumission bascule simplement sur l’écran de confirmation.
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+## Design
 
-## Bundle contents
+Le design provient d’un export Claude Design conservé dans le dépôt à titre de référence :
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Leaseack Immo` project files (HTML prototypes, assets, components)
+- `project/Site leaseback.immo.dc.html` — la maquette complète (source de vérité du balisage,
+  de la typographie, des espacements et des textes) ;
+- `project/_ds/…/tokens/*.css` — les jetons du design system, transcrits dans `app/globals.css` ;
+- `project/assets/` — les visuels d’origine ;
+- `chats/` — l’historique d’itération du design.
+
+Ces dossiers ne sont pas utilisés à l’exécution et ne sont pas inclus dans le build.
