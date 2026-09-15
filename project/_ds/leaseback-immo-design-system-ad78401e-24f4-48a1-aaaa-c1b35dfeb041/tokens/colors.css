@@ -1,0 +1,59 @@
+/* Palette transcribed verbatim from Leaseback-immobilier.fig */
+:root{
+  /* Brand */
+  --lb-rose:#E34454;            /* rgb(227,68,84) — primary accent, 866 uses */
+  --lb-rose-tint:rgba(227,68,84,.1098); /* pill / eyebrow fill */
+  --lb-rose-tint-strong:rgba(227,68,84,.3804);
+  --lb-gold:#C9A84C;            /* rgb(201,168,76) — asset-category titles, alt CTA */
+  --lb-amber:#F6BB04;           /* rgb(246,187,4) */
+
+  /* Ink */
+  --lb-navy:#0D1B2A;            /* rgb(13,27,42) — dark surfaces, headlines */
+  --lb-navy-card:#121C2D;       /* rgb(18,28,45) — dark card fill */
+  --lb-ink:#171B22;             /* rgb(23,27,34) — nav, body headings */
+  --lb-ink-2:#1F222A;           /* rgb(31,34,42) */
+  --lb-ink-3:#1A2630;           /* rgb(26,38,48) */
+  --lb-ink-4:#233240;           /* rgb(35,50,64) */
+  --lb-black:#000000;
+
+  /* Surfaces */
+  --lb-cream:#F7F5F1;           /* page background */
+  --lb-cream-2:#FBFAF8;
+  --lb-white:#FFFFFF;
+  --lb-off-white:#F9F9F9;
+  --lb-off-white-2:#FBFBFB;
+  --lb-grey-bg:#F8F9FB;
+
+  /* Lines */
+  --lb-line:#1B1F26;
+  --lb-line-soft:#D9D9D9;
+  --lb-line-mid:#707070;
+  --lb-hairline:rgba(0,0,0,.3);       /* the 0.3px button/field stroke */
+  --lb-line-on-dark:rgba(255,255,255,.24);
+
+  /* Semantic */
+  --lb-success:#16A34A;
+  --lb-success-tint:#E8F9EF;
+  --lb-warning:#D97706;
+  --lb-warning-tint:#FEF5E6;
+  --lb-danger:#E34454;
+
+  /* Semantic aliases */
+  --surface-page:var(--lb-cream);
+  --surface-card:var(--lb-white);
+  --surface-card-dark:var(--lb-navy-card);
+  --surface-band-dark:var(--lb-navy);
+  --surface-header:var(--lb-white);
+
+  --text-heading:var(--lb-navy);
+  --text-body:var(--lb-ink-2);
+  --text-muted:rgba(0,0,0,.72);
+  --text-nav:var(--lb-ink);
+  --text-accent:var(--lb-rose);
+  --text-on-dark:var(--lb-white);
+  --text-on-dark-muted:rgba(255,255,255,.72);
+  --text-category:var(--lb-gold);
+
+  --border-subtle:var(--lb-hairline);
+  --border-accent:var(--lb-rose);
+}

@@ -1,0 +1,5 @@
+/* leaseback.immo — webfonts.
+   The .fig references Public Sans, Inter, Hanken Grotesk (all Google Fonts, loaded here)
+   and "Font Awesome 6 Pro" Solid for small 12px glyphs — a licensed font that is NOT
+   shipped with this system. See readme.md → ICONOGRAPHY for the substitution. */
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Hanken+Grotesk:wght@300;400;500&display=swap");

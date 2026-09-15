@@ -1,0 +1,81 @@
+/* Responsive layer.
+   The .fig contains desktop frames only (1920px). These breakpoints are a proposal
+   built on the file's own values — the desktop column is exact, the smaller steps
+   scale the same rhythm down. Role tokens are re-declared per breakpoint so every
+   component that reads them reflows without changing its own code. */
+
+:root{
+  --page-x:75px;         /* section side inset */
+  --header-x:80px;       /* header side inset */
+  --section-y:120px;     /* section vertical rhythm */
+  --gap-lg:95px;         /* between paired cards */
+  --gap-md:40px;
+  --gap-sm:13px;
+  --step-gap:96px;       /* between timeline rows */
+}
+
+.lb-page{width:100%;max-width:1920px;margin-inline:auto}
+.lb-wrap{width:100%;max-width:var(--grid-content);margin-inline:auto;padding-inline:var(--page-x)}
+.lb-section{padding-block:var(--section-y);padding-inline:var(--page-x)}
+
+/* Collapsing grids — desktop column count in the name, all collapse to 1 on phones */
+.lb-grid{display:grid;gap:var(--gap-md)}
+.lb-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lb-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lb-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+/* Asymmetric split: prose beside a panel */
+.lb-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,780px);gap:120px;align-items:start}
+.lb-split-rev{display:grid;grid-template-columns:minmax(0,780px) minmax(0,1fr);gap:120px;align-items:start}
+
+/* ≤1440 — laptop: tighten the insets, keep every column count */
+@media (max-width:1440px){
+  :root{--page-x:48px;--header-x:48px;--section-y:96px;--gap-lg:48px;--gap-md:28px;--step-gap:72px;
+    --type-h1-size:40px;--type-h1-lh:56px;--type-h2-size:40px;--type-h2-lh:60px;
+    --type-h3-size:30px;--type-h3-lh:42px;--type-lead-size:26px;--type-lead-lh:40px;
+    --type-intro-size:21px;--type-intro-lh:34px;--btn-w:260px}
+  .lb-split,.lb-split-rev{gap:64px}
+}
+
+/* ≤1100 — tablet: four-up becomes two-up, splits stack */
+@media (max-width:1100px){
+  :root{--page-x:36px;--header-x:36px;--section-y:80px;--gap-lg:32px;--step-gap:56px;
+    --type-h1-size:34px;--type-h1-lh:46px;--type-h2-size:34px;--type-h2-lh:48px;
+    --type-h3-size:26px;--type-h3-lh:38px;--type-lead-size:22px;--type-lead-lh:34px;
+    --type-intro-size:19px;--type-intro-lh:31px;--type-body-size:17px;--type-body-lh:27px;
+    --btn-h:60px;--btn-pad-x:26px;--step-badge:80px}
+  .lb-grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lb-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lb-split,.lb-split-rev{grid-template-columns:minmax(0,1fr);gap:44px}
+}
+
+/* ≤760 — phone: single column throughout */
+@media (max-width:760px){
+  :root{--page-x:20px;--header-x:20px;--section-y:60px;--gap-lg:24px;--gap-md:20px;--gap-sm:12px;--step-gap:40px;
+    --type-h1-size:28px;--type-h1-lh:38px;--type-h2-size:28px;--type-h2-lh:38px;
+    --type-h3-size:23px;--type-h3-lh:32px;--type-h4-size:21px;--type-h4-lh:30px;
+    --type-lead-size:20px;--type-lead-lh:31px;--type-intro-size:18px;--type-intro-lh:29px;
+    --type-nav-size:17px;--btn-h:56px;--btn-w:100%;--step-badge:64px;--r-25:18px}
+  .lb-grid-2,.lb-grid-3,.lb-grid-4{grid-template-columns:minmax(0,1fr)}
+}
+
+/* Component-level reflow hooks (declared here so components stay prop-free) */
+@media (max-width:1100px){
+  .lb-header__nav{display:none}
+  .lb-header__burger{display:flex!important}
+  .lb-header__drawer{display:flex!important}
+  .lb-header__phone span{display:none}
+  .lb-footer__cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:40px!important}
+  .lb-footer__top{flex-direction:column!important;align-items:flex-start!important;gap:28px}
+  .lb-footer__top>div:last-child{align-items:flex-start!important;padding-top:0!important}
+  .lb-objectives{grid-template-columns:minmax(0,1fr)!important;gap:32px!important}
+  .lb-step{gap:28px!important}
+  .lb-hero{height:auto!important;min-height:480px}
+}
+@media (max-width:760px){
+  .lb-footer__cols{grid-template-columns:minmax(0,1fr)!important}
+  .lb-footer__legal{flex-direction:column;gap:14px}
+  .lb-step{flex-direction:column!important}
+  .lb-step__connector{display:none!important}
+  .lb-cta-row{flex-direction:column;align-items:stretch}
+  .lb-hero{min-height:420px}
+}

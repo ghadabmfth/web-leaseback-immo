@@ -1,0 +1,44 @@
+/* Type system — exact families, sizes and line-heights from the .fig */
+:root{
+  --font-display:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-body:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-alt:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+
+  /* Weights actually used */
+  --fw-light:300; /* @kind font */
+  --fw-regular:400; /* @kind font */
+  --fw-medium:500; /* @kind font */
+  --fw-semibold:600; /* @kind font */
+  --fw-bold:700; /* @kind font */
+
+  /* Size ramp — every size present in the source */
+  --fs-14:14px; --fs-15:15px; --fs-17:17px; --fs-18:18px; --fs-19:19px; --fs-20:20px;
+  --fs-21:21px; --fs-24:24px; --fs-25:25px; --fs-26:26px; --fs-27:27px; --fs-29:29px;
+  --fs-30:30px; --fs-32:32px; --fs-34:34px; --fs-36:36px; --fs-46:46px; --fs-48:48px;
+  --fs-51:51px; --fs-62:62px; --fs-75:75px;
+
+  /* Named roles */
+  --type-h1-size:48px;   --type-h1-lh:76.8px;  /* Inter 700 */
+  --type-h2-size:48px;   --type-h2-lh:88px;    /* Inter 700, section titles */
+  --type-h3-size:36px;   --type-h3-lh:50px;    /* Inter 400, card titles */
+  --type-h4-size:25px;   --type-h4-lh:40px;    /* Inter 400, sub-card / FAQ question */
+  --type-lead-size:32px; --type-lead-lh:51.2px;/* Public Sans 400 */
+  --type-intro-size:25px;--type-intro-lh:40px; /* Public Sans 300 */
+  --type-body-size:18px; --type-body-lh:28.8px;/* Public Sans 300/400 */
+  --type-nav-size:20px;  --type-nav-lh:1;      /* Public Sans 500 */
+  --type-eyebrow-size:17px;--type-eyebrow-lh:1;/* Public Sans 400, in pill */
+  --type-meta-size:14px; --type-meta-lh:35px;  /* Hanken Grotesk 400 */
+
+  --tracking-tight:-0.035em;
+  --tracking-snug:-0.030em;
+}
+
+/* Utility classes — optional, mirror the roles above */
+.lb-h1{font-family:var(--font-display);font-weight:700;font-size:var(--type-h1-size);line-height:var(--type-h1-lh);color:var(--text-heading)}
+.lb-h2{font-family:var(--font-display);font-weight:700;font-size:var(--type-h2-size);line-height:var(--type-h2-lh);color:var(--text-heading)}
+.lb-h3{font-family:var(--font-display);font-weight:400;font-size:var(--type-h3-size);line-height:var(--type-h3-lh);color:var(--lb-ink)}
+.lb-h4{font-family:var(--font-display);font-weight:400;font-size:var(--type-h4-size);line-height:var(--type-h4-lh);color:var(--lb-ink)}
+.lb-lead{font-family:var(--font-body);font-weight:400;font-size:var(--type-lead-size);line-height:var(--type-lead-lh);color:var(--lb-ink-2)}
+.lb-intro{font-family:var(--font-body);font-weight:300;font-size:var(--type-intro-size);line-height:var(--type-intro-lh)}
+.lb-body{font-family:var(--font-body);font-weight:300;font-size:var(--type-body-size);line-height:var(--type-body-lh)}
+.lb-meta{font-family:var(--font-alt);font-weight:400;font-size:var(--type-meta-size);line-height:var(--type-meta-lh)}

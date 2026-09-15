@@ -1,0 +1,4 @@
+/* Minimal base — safe for consumers to inherit */
+a{color:var(--lb-rose);text-decoration:none}
+a:hover{color:var(--lb-navy)}
+:where(html){-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}

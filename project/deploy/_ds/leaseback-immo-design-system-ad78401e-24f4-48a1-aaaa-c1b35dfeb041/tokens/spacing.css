@@ -1,0 +1,49 @@
+/* Layout, spacing, radii, shadows — measured off the 1920px artboards */
+:root{
+  /* Page grid */
+  --grid-artboard:1920px;
+  --grid-gutter:80px;        /* header inner inset */
+  --grid-margin:75px;        /* section content inset */
+  --grid-content:1770px;     /* 1920 − 2×75 */
+  --grid-band:1749px;        /* dark rounded band width */
+  --header-h:104px;
+
+  /* Spacing ramp (values observed in the file) */
+  --sp-4:4px; --sp-6:6px; --sp-8:8px; --sp-12:12px; --sp-17:17px; --sp-23:23px;
+  --sp-26:26px; --sp-31:31px; --sp-38:38px; --sp-48:48px; --sp-59:59px; --sp-64:64px;
+  --sp-80:80px; --sp-104:104px; --sp-120:120px; --sp-150:150px;
+
+  /* Radii */
+  --r-10:10px;   /* FAQ row */
+  --r-15:15px;   /* cards */
+  --r-16:16px;   /* buttons */
+  --r-20:20px;   /* small pill */
+  --r-22:22px;   /* eyebrow pill */
+  --r-25:25px;   /* dark band */
+  --r-full:999px;
+
+  /* Control sizes */
+  --btn-h:71px;
+  --btn-w:308px;
+  --btn-pad-x:38px;
+  --pill-h:43px;
+  --step-badge:107px;
+
+  /* Elevation */
+  --shadow-header:0 3px 6px rgba(0,0,0,.1608);
+  --shadow-card:0 3px 10px rgba(0,0,0,.102);
+  --shadow-card-ink:0 3px 10px rgba(23,27,34,.102);
+  --shadow-soft:0 3px 6px rgba(165,165,165,.1608);
+  --shadow-rose:0 3px 6px rgba(227,68,84,.3804);
+  --shadow-rose-lg:0 3px 10px rgba(227,68,84,.3804);
+  --shadow-gold:0 3px 6px rgba(201,168,76,.3804);
+  --ring-hairline:inset 0 0 0 .3px rgb(0,0,0); /* @kind shadow */
+  --ring-rose:inset 0 0 0 1px var(--lb-rose); /* @kind shadow */
+  --ring-on-dark:inset 0 0 0 .1px rgb(255,255,255); /* @kind shadow */
+
+  /* Motion */
+  --ease-standard:cubic-bezier(.22,.61,.36,1); /* @kind other */
+  --dur-fast:120ms; /* @kind other */
+  --dur:200ms; /* @kind other */
+  --dur-slow:360ms; /* @kind other */
+}
