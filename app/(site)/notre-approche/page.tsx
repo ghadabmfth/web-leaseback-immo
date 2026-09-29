@@ -72,7 +72,7 @@ export default function ApprochePage() {
               <div style={{ marginTop: "22px", fontFamily: "var(--font-display)", fontWeight: "400", fontSize: "clamp(19px,1.6vw,27px)", lineHeight: "1.4", letterSpacing: "-.02em", color: "rgba(0,0,0,.62)" }}>« Quel est votre besoin de financement ? »</div>
               <p style={{ margin: "14px 0 0", fontFamily: "Archivo", fontWeight: "300", fontSize: "16px", lineHeight: "26px", color: "rgba(0,0,0,.58)" }}>Le dossier est construit à partir du montant recherché, puis l’actif est ramené au rang de garantie.</p>
             </div>
-            <div className="lb-pivot__arrow" style={{ display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Icon name="arrow" size={12} color="var(--lb-white)" /></div>
+            <div className="lb-pivot__arrow" style={{ display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Icon name="arrow" size={12} color="var(--lb-white)" /></div>
             <div className="lb-ondark" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-navy)", boxShadow: "var(--shadow-card-ink)", padding: "clamp(26px,2.6vw,42px)" }}>
               <span className="lb-soln__halo" style={{ position: "absolute", right: "-46px", bottom: "-60px", width: "190px", height: "190px", borderRadius: "95px", background: "rgba(255,255,255,.06)" }}></span>
               <span style={{ position: "relative", display: "inline-flex", alignSelf: "flex-start", alignItems: "center", height: "34px", padding: "0 15px", borderRadius: "20px", background: "var(--lb-rose)", fontFamily: "Archivo", fontWeight: "500", fontSize: "15px", color: "var(--lb-white)" }}>Notre approche</span>
@@ -189,8 +189,8 @@ export default function ApprochePage() {
             <div style={{ marginTop: "26px" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "auto minmax(0,1fr)", columnGap: "18px" }}>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <span style={{ flex: "none", display: "grid", placeItems: "center", width: "44px", height: "44px", borderRadius: "22px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "15px" }}>01</span>
-                    <span style={{ flex: "1", width: "2px", margin: "8px 0", background: "repeating-linear-gradient(180deg,rgba(227,68,84,.34) 0 6px,transparent 6px 14px)" }}></span>
+                    <span style={{ flex: "none", display: "grid", placeItems: "center", width: "44px", height: "44px", borderRadius: "22px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "15px" }}>01</span>
+                    <span style={{ flex: "1", width: "2px", margin: "8px 0", background: "repeating-linear-gradient(180deg,rgba(125,26,46,.34) 0 6px,transparent 6px 14px)" }}></span>
                   </div>
                   <div style={{ paddingBottom: "22px" }}>
                     <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "17px", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Étude de faisabilité</div>
@@ -199,8 +199,8 @@ export default function ApprochePage() {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "auto minmax(0,1fr)", columnGap: "18px" }}>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <span style={{ flex: "none", display: "grid", placeItems: "center", width: "44px", height: "44px", borderRadius: "22px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "15px" }}>02</span>
-                    <span style={{ flex: "1", width: "2px", margin: "8px 0", background: "repeating-linear-gradient(180deg,rgba(227,68,84,.34) 0 6px,transparent 6px 14px)" }}></span>
+                    <span style={{ flex: "none", display: "grid", placeItems: "center", width: "44px", height: "44px", borderRadius: "22px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "15px" }}>02</span>
+                    <span style={{ flex: "1", width: "2px", margin: "8px 0", background: "repeating-linear-gradient(180deg,rgba(125,26,46,.34) 0 6px,transparent 6px 14px)" }}></span>
                   </div>
                   <div style={{ paddingBottom: "22px" }}>
                     <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "17px", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Choix du véhicule de structuration</div>
@@ -209,8 +209,8 @@ export default function ApprochePage() {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "auto minmax(0,1fr)", columnGap: "18px" }}>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <span style={{ flex: "none", display: "grid", placeItems: "center", width: "44px", height: "44px", borderRadius: "22px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "15px" }}>03</span>
-                    <span style={{ flex: "1", width: "2px", margin: "8px 0", background: "repeating-linear-gradient(180deg,rgba(227,68,84,.34) 0 6px,transparent 6px 14px)" }}></span>
+                    <span style={{ flex: "none", display: "grid", placeItems: "center", width: "44px", height: "44px", borderRadius: "22px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "15px" }}>03</span>
+                    <span style={{ flex: "1", width: "2px", margin: "8px 0", background: "repeating-linear-gradient(180deg,rgba(125,26,46,.34) 0 6px,transparent 6px 14px)" }}></span>
                   </div>
                   <div style={{ paddingBottom: "22px" }}>
                     <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "17px", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Coordination des intervenants</div>
@@ -219,7 +219,7 @@ export default function ApprochePage() {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "auto minmax(0,1fr)", columnGap: "18px" }}>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <span style={{ flex: "none", display: "grid", placeItems: "center", width: "44px", height: "44px", borderRadius: "22px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "15px" }}>04</span>
+                    <span style={{ flex: "none", display: "grid", placeItems: "center", width: "44px", height: "44px", borderRadius: "22px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "15px" }}>04</span>
                 
                   </div>
                   <div style={{ paddingBottom: "0" }}>
@@ -246,7 +246,7 @@ export default function ApprochePage() {
           </div>
           <div className="lb-grid lb-grid-2" data-reveal="" style={{ marginTop: "clamp(18px,1.8vw,26px)", alignItems: "stretch" }}>
             <div className="lb-soln" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-rose-tint)", padding: "clamp(26px,2.6vw,42px)" }}>
-              <span className="lb-soln__halo" style={{ position: "absolute", right: "-70px", top: "-70px", width: "clamp(120px,30%,160px)", aspectRatio: "1", borderRadius: "50%", background: "rgba(227,68,84,.22)" }}></span>
+              <span className="lb-soln__halo" style={{ position: "absolute", right: "-70px", top: "-70px", width: "clamp(120px,30%,160px)", aspectRatio: "1", borderRadius: "50%", background: "rgba(125,26,46,.22)" }}></span>
               <span style={{ position: "relative", display: "inline-flex", alignSelf: "flex-start", alignItems: "center", height: "36px", padding: "0 15px", borderRadius: "20px", background: "var(--lb-rose)", fontFamily: "Archivo", fontWeight: "500", fontSize: "15px", color: "var(--lb-white)" }}>Cabinet</span>
               <div style={{ position: "relative", marginTop: "22px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(21px,1.7vw,28px)", letterSpacing: "-.025em", color: "var(--lb-ink)" }}>Bluelease</div>
               <p style={{ position: "relative", margin: "12px 0 0", fontFamily: "Archivo", fontWeight: "300", fontSize: "16px", lineHeight: "26px", color: "rgba(0,0,0,.72)" }}>Bluelease accompagne les entreprises dans leurs projets de financement, aussi bien sur le leasing de matériels et d’équipements professionnels que sur le refinancement d’actifs immobiliers professionnels.</p>

@@ -87,8 +87,8 @@ export default function LiquiditesPage() {
           </div>
           <div className="lb-grid lb-grid-2" data-reveal="" style={{ marginTop: "clamp(32px,3.2vw,52px)", alignItems: "stretch" }}>
             <Link href="/fiducie-surete" className="lb-soln lb-cardhov" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-rose-tint)", padding: "clamp(26px,2.6vw,42px)", color: "inherit" }}>
-              <span className="lb-soln__halo" style={{ position: "absolute", right: "-40px", top: "-40px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(227,68,84,.22)" }}></span>
-              <span style={{ position: "relative", display: "grid", placeItems: "center", width: "56px", height: "56px", borderRadius: "28px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="shield-halved" style={{ fontSize: "20px", lineHeight: "1" }} /></span>
+              <span className="lb-soln__halo" style={{ position: "absolute", right: "-40px", top: "-40px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(125,26,46,.22)" }}></span>
+              <span style={{ position: "relative", display: "grid", placeItems: "center", width: "56px", height: "56px", borderRadius: "28px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="shield-halved" style={{ fontSize: "20px", lineHeight: "1" }} /></span>
               <span style={{ position: "relative", marginTop: "22px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(21px,1.7vw,28px)", letterSpacing: "-.025em", color: "var(--lb-ink)" }}>La fiducie-sûreté</span>
               <span style={{ position: "relative", marginTop: "12px", fontWeight: "300", fontSize: "16px", lineHeight: "26px", color: "rgba(0,0,0,.72)" }}>Transfert de propriété à titre de garantie d’un financement, sur l’immeuble ou les titres qui le portent selon le montage.</span>
               <span style={{ position: "relative", marginTop: "auto", paddingTop: "26px", display: "block" }}>
@@ -108,7 +108,7 @@ export default function LiquiditesPage() {
             </Link>
             <Link href="/credit-bail-immobilier" className="lb-soln lb-cardhov lb-ondark" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-navy)", boxShadow: "var(--shadow-card-ink)", padding: "clamp(26px,2.6vw,42px)", color: "inherit" }}>
               <span className="lb-soln__halo" style={{ position: "absolute", right: "-40px", bottom: "-56px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(255,255,255,.06)" }}></span>
-              <span style={{ position: "relative", display: "grid", placeItems: "center", width: "56px", height: "56px", borderRadius: "28px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="file-signature" style={{ fontSize: "20px", lineHeight: "1" }} /></span>
+              <span style={{ position: "relative", display: "grid", placeItems: "center", width: "56px", height: "56px", borderRadius: "28px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="file-signature" style={{ fontSize: "20px", lineHeight: "1" }} /></span>
               <span style={{ position: "relative", marginTop: "22px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(21px,1.7vw,28px)", letterSpacing: "-.025em", color: "var(--lb-white)" }}>Le crédit-bail immobilier</span>
               <span style={{ position: "relative", marginTop: "12px", fontWeight: "300", fontSize: "16px", lineHeight: "26px", color: "rgba(255,255,255,.8)" }}>Cession-bail sur un actif déjà détenu : loyers déductibles dans les limites de la réglementation fiscale applicable.</span>
               <span style={{ position: "relative", marginTop: "auto", paddingTop: "26px", display: "block" }}>
@@ -148,7 +148,7 @@ export default function LiquiditesPage() {
           <div data-reveal="">
             <div className="lb-crits" style={{ display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: "clamp(14px,1.6vw,20px)" }}>
               <div className="lb-cardhov" style={{ display: "flex", gap: "18px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,28px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "50px", height: "50px", borderRadius: "25px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="building" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "50px", height: "50px", borderRadius: "25px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="building" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-alt)", fontWeight: "500", fontSize: "12px", letterSpacing: ".16em", textTransform: "uppercase", color: "var(--lb-rose)" }}>01</div>
                   <div style={{ marginTop: "7px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(17px,1.25vw,20px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Être propriétaire du bien</div>
@@ -156,7 +156,7 @@ export default function LiquiditesPage() {
                 </div>
               </div>
               <div className="lb-cardhov" style={{ display: "flex", gap: "18px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,28px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "50px", height: "50px", borderRadius: "25px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="wallet" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "50px", height: "50px", borderRadius: "25px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="wallet" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-alt)", fontWeight: "500", fontSize: "12px", letterSpacing: ".16em", textTransform: "uppercase", color: "var(--lb-rose)" }}>02</div>
                   <div style={{ marginTop: "7px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(17px,1.25vw,20px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Capacité à honorer les loyers futurs</div>
@@ -164,7 +164,7 @@ export default function LiquiditesPage() {
                 </div>
               </div>
               <div className="lb-cardhov" style={{ display: "flex", gap: "18px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,28px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "50px", height: "50px", borderRadius: "25px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="chart-pie" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "50px", height: "50px", borderRadius: "25px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="chart-pie" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-alt)", fontWeight: "500", fontSize: "12px", letterSpacing: ".16em", textTransform: "uppercase", color: "var(--lb-rose)" }}>03</div>
                   <div style={{ marginTop: "7px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(17px,1.25vw,20px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Situation financière viable</div>
@@ -172,7 +172,7 @@ export default function LiquiditesPage() {
                 </div>
               </div>
               <div className="lb-cardhov" style={{ display: "flex", gap: "18px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,28px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "50px", height: "50px", borderRadius: "25px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="location-dot" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "50px", height: "50px", borderRadius: "25px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="location-dot" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-alt)", fontWeight: "500", fontSize: "12px", letterSpacing: ".16em", textTransform: "uppercase", color: "var(--lb-rose)" }}>04</div>
                   <div style={{ marginTop: "7px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(17px,1.25vw,20px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Bien situé en France métropolitaine</div>
@@ -181,7 +181,7 @@ export default function LiquiditesPage() {
               </div>
             </div>
             <div className="lb-cardhov" style={{ marginTop: "clamp(14px,1.6vw,20px)", display: "flex", gap: "20px", alignItems: "center", borderRadius: "var(--r-15)", background: "var(--lb-navy)", boxShadow: "var(--shadow-card-ink)", padding: "clamp(22px,2.2vw,32px)" }}>
-              <span style={{ flex: "none", display: "grid", placeItems: "center", width: "56px", height: "56px", borderRadius: "28px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="euro-sign" style={{ fontSize: "20px", lineHeight: "1" }} /></span>
+              <span style={{ flex: "none", display: "grid", placeItems: "center", width: "56px", height: "56px", borderRadius: "28px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="euro-sign" style={{ fontSize: "20px", lineHeight: "1" }} /></span>
               <div>
                 <div style={{ fontFamily: "var(--font-alt)", fontWeight: "500", fontSize: "12px", letterSpacing: ".16em", textTransform: "uppercase", color: "var(--lb-gold)" }}>05</div>
                 <div style={{ marginTop: "6px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(18px,1.4vw,23px)", letterSpacing: "-.02em", color: "var(--lb-white)" }}>Valeur de l’actif à partir de 1 M€</div>

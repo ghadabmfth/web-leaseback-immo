@@ -49,14 +49,14 @@ export default function ComparatifPage() {
           </div>
           <div className="lb-grid lb-grid-2" data-reveal="" style={{ marginTop: "clamp(32px,3.2vw,52px)", alignItems: "stretch" }}>
             <div className="lb-cardhov" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-white)", boxShadow: "inset 0 0 0 1.5px var(--lb-rose),0 10px 30px rgba(0,0,0,.1)", padding: "clamp(24px,2.4vw,38px)" }}>
-              <span className="lb-soln__halo" style={{ position: "absolute", right: "-46px", top: "-46px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(227,68,84,.09)" }}></span>
-              <span style={{ position: "relative", display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="file-signature" style={{ fontSize: "19px", lineHeight: "1" }} /></span>
+              <span className="lb-soln__halo" style={{ position: "absolute", right: "-46px", top: "-46px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(125,26,46,.09)" }}></span>
+              <span style={{ position: "relative", display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="file-signature" style={{ fontSize: "19px", lineHeight: "1" }} /></span>
               <span style={{ position: "relative", marginTop: "22px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(19px,1.5vw,25px)", lineHeight: "1.26", letterSpacing: "-.025em", color: "var(--lb-ink)" }}>Crédit-bail immobilier</span>
               <span style={{ position: "relative", marginTop: "12px", fontWeight: "300", fontSize: "16px", lineHeight: "26px", color: "rgba(0,0,0,.7)" }}>Une cession suivie d’une relocation immédiate. La propriété juridique passe au crédit-bailleur pour la durée du contrat, et une option d’achat est fixée dès la signature.</span>
             </div>
             <div className="lb-cardhov lb-ondark" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-navy)", boxShadow: "var(--shadow-card-ink)", padding: "clamp(24px,2.4vw,38px)" }}>
               <span className="lb-soln__halo" style={{ position: "absolute", right: "-46px", bottom: "-60px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(255,255,255,.06)" }}></span>
-              <span style={{ position: "relative", display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="shield-halved" style={{ fontSize: "19px", lineHeight: "1" }} /></span>
+              <span style={{ position: "relative", display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="shield-halved" style={{ fontSize: "19px", lineHeight: "1" }} /></span>
               <span style={{ position: "relative", marginTop: "22px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(19px,1.5vw,25px)", lineHeight: "1.26", letterSpacing: "-.025em", color: "var(--lb-white)" }}>Fiducie-sûreté</span>
               <span style={{ position: "relative", marginTop: "12px", fontWeight: "300", fontSize: "16px", lineHeight: "26px", color: "rgba(255,255,255,.8)" }}>Un transfert temporaire à un fiduciaire, à titre de garantie uniquement. L’actif revient automatiquement dès que la dette est éteinte.</span>
             </div>
@@ -157,9 +157,9 @@ export default function ComparatifPage() {
           </div>
           <div className="lb-grid lb-grid-2" data-reveal="" style={{ marginTop: "clamp(32px,3.2vw,52px)", alignItems: "stretch" }}>
             <div style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-white)", boxShadow: "inset 0 0 0 1.5px var(--lb-rose),0 10px 30px rgba(0,0,0,.1)", padding: "clamp(24px,2.4vw,38px)" }}>
-              <span className="lb-soln__halo" style={{ position: "absolute", right: "-46px", top: "-46px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(227,68,84,.09)" }}></span>
+              <span className="lb-soln__halo" style={{ position: "absolute", right: "-46px", top: "-46px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(125,26,46,.09)" }}></span>
               <div style={{ position: "relative", display: "flex", gap: "16px", alignItems: "center" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="file-signature" style={{ fontSize: "19px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="file-signature" style={{ fontSize: "19px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-alt)", fontWeight: "500", fontSize: "12px", letterSpacing: ".16em", textTransform: "uppercase", color: "var(--lb-rose)" }}>Plutôt le crédit-bail</div>
                   <div style={{ marginTop: "5px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(19px,1.5vw,25px)", letterSpacing: "-.025em", color: "var(--lb-ink)" }}>4 signaux</div>
@@ -175,7 +175,7 @@ export default function ComparatifPage() {
             <div className="lb-ondark" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-navy)", boxShadow: "var(--shadow-card-ink)", padding: "clamp(24px,2.4vw,38px)" }}>
               <span className="lb-soln__halo" style={{ position: "absolute", right: "-46px", bottom: "-60px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(255,255,255,.06)" }}></span>
               <div style={{ position: "relative", display: "flex", gap: "16px", alignItems: "center" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="shield-halved" style={{ fontSize: "19px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "54px", height: "54px", borderRadius: "27px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="shield-halved" style={{ fontSize: "19px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-alt)", fontWeight: "500", fontSize: "12px", letterSpacing: ".16em", textTransform: "uppercase", color: "var(--lb-gold)" }}>Plutôt la fiducie</div>
                   <div style={{ marginTop: "5px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(19px,1.5vw,25px)", letterSpacing: "-.025em", color: "var(--lb-white)" }}>4 signaux</div>

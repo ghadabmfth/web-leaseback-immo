@@ -128,42 +128,42 @@ export default function ActifsPage() {
           </div>
           <div className="lb-crits" data-reveal="" style={{ display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: "clamp(14px,1.6vw,20px)" }}>
               <div className="lb-cardhov" style={{ display: "flex", gap: "16px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,26px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="chart-simple" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="chart-simple" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(16px,1.2vw,19px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Valeur vénale</div>
                   <p style={{ margin: "6px 0 0", fontWeight: "300", fontSize: "16px", lineHeight: "25px", color: "rgba(0,0,0,.7)" }}>À partir de 1 M€ en crédit-bail, 5 M€ en fiducie-sûreté.</p>
                 </div>
               </div>
               <div className="lb-cardhov" style={{ display: "flex", gap: "16px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,26px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="arrow-trend-up" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="arrow-trend-up" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(16px,1.2vw,19px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Liquidité</div>
                   <p style={{ margin: "6px 0 0", fontWeight: "300", fontSize: "16px", lineHeight: "25px", color: "rgba(0,0,0,.7)" }}>La capacité du bien à se relouer ou se revendre sans décote lourde.</p>
                 </div>
               </div>
               <div className="lb-cardhov" style={{ display: "flex", gap: "16px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,26px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="location-dot" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="location-dot" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(16px,1.2vw,19px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Emplacement</div>
                   <p style={{ margin: "6px 0 0", fontWeight: "300", fontSize: "16px", lineHeight: "25px", color: "rgba(0,0,0,.7)" }}>Zone d’activité établie, accessibilité, environnement économique.</p>
                 </div>
               </div>
               <div className="lb-cardhov" style={{ display: "flex", gap: "16px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,26px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="file-shield" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="file-shield" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(16px,1.2vw,19px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Situation juridique</div>
                   <p style={{ margin: "6px 0 0", fontWeight: "300", fontSize: "16px", lineHeight: "25px", color: "rgba(0,0,0,.7)" }}>Titre de propriété clair, sûretés existantes, situation urbanistique régulière.</p>
                 </div>
               </div>
               <div className="lb-cardhov" style={{ display: "flex", gap: "16px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,26px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="leaf" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="leaf" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(16px,1.2vw,19px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Environnement</div>
                   <p style={{ margin: "6px 0 0", fontWeight: "300", fontSize: "16px", lineHeight: "25px", color: "rgba(0,0,0,.7)" }}>Passif environnemental identifié et, le cas échéant, levé en amont.</p>
                 </div>
               </div>
               <div className="lb-cardhov" style={{ display: "flex", gap: "16px", alignItems: "flex-start", borderRadius: "var(--r-15)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(20px,2vw,26px)" }}>
-                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="building-user" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
+                <span style={{ flex: "none", display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="building-user" style={{ fontSize: "16px", lineHeight: "1" }} /></span>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(16px,1.2vw,19px)", lineHeight: "1.3", letterSpacing: "-.015em", color: "var(--lb-ink)" }}>Exploitation</div>
                   <p style={{ margin: "6px 0 0", fontWeight: "300", fontSize: "16px", lineHeight: "25px", color: "rgba(0,0,0,.7)" }}>Une activité capable de supporter les loyers ou les échéances du financement, selon le montage, sur toute la durée du contrat.</p>
@@ -195,7 +195,7 @@ export default function ActifsPage() {
           </div>
           <div style={{ display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-white)", boxShadow: "inset 0 0 0 1.5px var(--lb-rose),0 10px 30px rgba(0,0,0,.1)", padding: "clamp(24px,2.4vw,38px)" }}>
             <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-              <span style={{ flex: "none", display: "grid", placeItems: "center", width: "52px", height: "52px", borderRadius: "26px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(227,68,84,.32)" }}><Fa name="list-check" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
+              <span style={{ flex: "none", display: "grid", placeItems: "center", width: "52px", height: "52px", borderRadius: "26px", background: "var(--lb-rose)", color: "var(--lb-white)", boxShadow: "0 6px 16px rgba(125,26,46,.32)" }}><Fa name="list-check" style={{ fontSize: "18px", lineHeight: "1" }} /></span>
               <div>
                 <div style={{ fontFamily: "var(--font-alt)", fontWeight: "500", fontSize: "12px", letterSpacing: ".16em", textTransform: "uppercase", color: "var(--lb-rose)" }}>À préparer</div>
                 <div style={{ marginTop: "5px", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "clamp(19px,1.5vw,25px)", letterSpacing: "-.025em", color: "var(--lb-ink)" }}>Les pièces qui accélèrent l’instruction</div>

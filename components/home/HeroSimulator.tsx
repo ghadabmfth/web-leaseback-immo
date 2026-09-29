@@ -401,7 +401,7 @@ export function HeroSimulator() {
           gap: 16,
           marginTop: 22,
           padding: '10px 10px 10px 20px',
-          border: '1px solid #E34454',
+          border: '1px solid #7D1A2E',
           borderRadius: 50,
           color: 'var(--lb-ink)',
         }}

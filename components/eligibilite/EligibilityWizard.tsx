@@ -626,7 +626,7 @@ export function EligibilityWizard() {
             immobilière, juridique et fiscale complète.
           </span>
         </div>
-        <div className="lb-testcta" style={{ marginTop: 26, padding: '10px 10px 10px 20px', border: '1px solid #E34454', borderRadius: 50 }}>
+        <div className="lb-testcta" style={{ marginTop: 26, padding: '10px 10px 10px 20px', border: '1px solid #7D1A2E', borderRadius: 50 }}>
           <ActionButton tone="primary" full onClick={() => setStepIndex(0)}>
             Commencer le test
           </ActionButton>

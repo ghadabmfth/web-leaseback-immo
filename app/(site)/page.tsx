@@ -66,7 +66,7 @@ export default function AccueilPage() {
           </div>
           <div className="lb-grid lb-grid-2" data-reveal="" style={{ marginTop: "clamp(36px,4vw,64px)" }}>
             <Link href="/credit-bail-immobilier" className="lb-soln" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-rose-tint)", boxShadow: "var(--shadow-card)", padding: "clamp(28px,2.8vw,48px)", color: "inherit" }}>
-              <span className="lb-soln__halo" style={{ position: "absolute", right: "-40px", top: "-40px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(227,68,84,.22)" }}></span>
+              <span className="lb-soln__halo" style={{ position: "absolute", right: "-40px", top: "-40px", width: "180px", height: "180px", borderRadius: "90px", background: "rgba(125,26,46,.22)" }}></span>
               <span style={{ position: "relative", display: "inline-flex", alignSelf: "flex-start", alignItems: "center", height: "38px", padding: "0 16px", borderRadius: "19px", background: "var(--lb-rose)", color: "var(--lb-white)", fontWeight: "500", fontSize: "15px" }}>Dès 1 M€</span>
               <h3 style={{ position: "relative", margin: "22px 0 0", color: "var(--lb-ink)" }}>Crédit-bail immobilier</h3>
               <p style={{ position: "relative", margin: "14px 0 0", fontWeight: "300", lineHeight: "27px", color: "rgba(0,0,0,.72)" }}>La société cède son bâtiment à un crédit-bailleur, qui le lui reloue immédiatement. Les loyers sont déductibles et une option d'achat est fixée dès la signature.</p>

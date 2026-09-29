@@ -7,9 +7,9 @@
 /* Palette transcribed verbatim from Leaseback-immobilier.fig */
 :root{
   /* Brand */
-  --lb-rose:#E34454;            /* rgb(227,68,84) — primary accent, 866 uses */
-  --lb-rose-tint:rgba(227,68,84,.1098); /* pill / eyebrow fill */
-  --lb-rose-tint-strong:rgba(227,68,84,.3804);
+  --lb-rose:#7D1A2E;            /* rgb(125,26,46) — primary accent, 866 uses */
+  --lb-rose-tint:rgba(125,26,46,.1098); /* pill / eyebrow fill */
+  --lb-rose-tint-strong:rgba(125,26,46,.3804);
   --lb-gold:#C9A84C;            /* rgb(201,168,76) — asset-category titles, alt CTA */
   --lb-amber:#F6BB04;           /* rgb(246,187,4) */
 
@@ -42,7 +42,7 @@
   --lb-success-tint:#E8F9EF;
   --lb-warning:#D97706;
   --lb-warning-tint:#FEF5E6;
-  --lb-danger:#E34454;
+  --lb-danger:#7D1A2E;
 
   /* Semantic aliases */
   --surface-page:var(--lb-cream);
@@ -147,8 +147,8 @@
   --shadow-card:0 3px 10px rgba(0,0,0,.102);
   --shadow-card-ink:0 3px 10px rgba(23,27,34,.102);
   --shadow-soft:0 3px 6px rgba(165,165,165,.1608);
-  --shadow-rose:0 3px 6px rgba(227,68,84,.3804);
-  --shadow-rose-lg:0 3px 10px rgba(227,68,84,.3804);
+  --shadow-rose:0 3px 6px rgba(125,26,46,.3804);
+  --shadow-rose-lg:0 3px 10px rgba(125,26,46,.3804);
   --shadow-gold:0 3px 6px rgba(201,168,76,.3804);
   --ring-hairline:inset 0 0 0 .3px rgb(0,0,0); /* @kind shadow */
   --ring-rose:inset 0 0 0 1px var(--lb-rose); /* @kind shadow */
@@ -315,13 +315,13 @@ a:hover{color:var(--lb-rose);opacity:.78}
 /* Footer field: two offset dot grids drifting in opposite directions, masked so the
    texture fades out before it reaches the legal line. */
 @keyframes lbDrift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(14px,-12px,0)}}
-.lb-dots{position:absolute;inset:-40px;pointer-events:none;background-repeat:no-repeat;background-image:radial-gradient(circle 4px at 62% 88%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 70% 74%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 76% 84%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 81% 66%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 86% 79%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 90% 58%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 94% 71%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 73% 58%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 84% 50%,rgba(227,68,84,.42) 100%,transparent 0),radial-gradient(circle 4px at 95% 44%,rgba(227,68,84,.42) 100%,transparent 0);-webkit-mask-image:radial-gradient(110% 95% at 96% 96%,#000 0%,rgba(0,0,0,.55) 44%,transparent 76%);mask-image:radial-gradient(110% 95% at 96% 96%,#000 0%,rgba(0,0,0,.55) 44%,transparent 76%);animation:lbDrift 18s ease-in-out infinite;will-change:transform}
-.lb-dots--2{background-image:radial-gradient(circle 4px at 66% 80%,rgba(227,68,84,.22) 100%,transparent 0),radial-gradient(circle 4px at 74% 66%,rgba(227,68,84,.22) 100%,transparent 0),radial-gradient(circle 4px at 79% 76%,rgba(227,68,84,.22) 100%,transparent 0),radial-gradient(circle 4px at 88% 64%,rgba(227,68,84,.22) 100%,transparent 0),radial-gradient(circle 4px at 92% 52%,rgba(227,68,84,.22) 100%,transparent 0),radial-gradient(circle 4px at 68% 92%,rgba(227,68,84,.22) 100%,transparent 0),radial-gradient(circle 4px at 85% 88%,rgba(227,68,84,.22) 100%,transparent 0);animation-duration:24s;animation-direction:reverse;-webkit-mask-image:radial-gradient(90% 80% at 88% 88%,#000 0%,transparent 70%);mask-image:radial-gradient(90% 80% at 88% 88%,#000 0%,transparent 70%)}
+.lb-dots{position:absolute;inset:-40px;pointer-events:none;background-repeat:no-repeat;background-image:radial-gradient(circle 4px at 62% 88%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 70% 74%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 76% 84%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 81% 66%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 86% 79%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 90% 58%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 94% 71%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 73% 58%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 84% 50%,rgba(125,26,46,.42) 100%,transparent 0),radial-gradient(circle 4px at 95% 44%,rgba(125,26,46,.42) 100%,transparent 0);-webkit-mask-image:radial-gradient(110% 95% at 96% 96%,#000 0%,rgba(0,0,0,.55) 44%,transparent 76%);mask-image:radial-gradient(110% 95% at 96% 96%,#000 0%,rgba(0,0,0,.55) 44%,transparent 76%);animation:lbDrift 18s ease-in-out infinite;will-change:transform}
+.lb-dots--2{background-image:radial-gradient(circle 4px at 66% 80%,rgba(125,26,46,.22) 100%,transparent 0),radial-gradient(circle 4px at 74% 66%,rgba(125,26,46,.22) 100%,transparent 0),radial-gradient(circle 4px at 79% 76%,rgba(125,26,46,.22) 100%,transparent 0),radial-gradient(circle 4px at 88% 64%,rgba(125,26,46,.22) 100%,transparent 0),radial-gradient(circle 4px at 92% 52%,rgba(125,26,46,.22) 100%,transparent 0),radial-gradient(circle 4px at 68% 92%,rgba(125,26,46,.22) 100%,transparent 0),radial-gradient(circle 4px at 85% 88%,rgba(125,26,46,.22) 100%,transparent 0);animation-duration:24s;animation-direction:reverse;-webkit-mask-image:radial-gradient(90% 80% at 88% 88%,#000 0%,transparent 70%);mask-image:radial-gradient(90% 80% at 88% 88%,#000 0%,transparent 70%)}
 @media (prefers-reduced-motion:reduce){.lb-dots{animation:none}}
 /* 404: the logo dot stands in for the zero — it bounces, then breathes. */
 @keyframes lb404Drop{0%{transform:translateY(-160%) scale(.7);opacity:0}55%{transform:translateY(0) scale(1.06);opacity:1}72%{transform:translateY(-16%) scale(.98)}100%{transform:translateY(0) scale(1);opacity:1}}
 @keyframes lb404Pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
-.lb-404__dot{animation:lb404Drop 1s cubic-bezier(.22,.61,.36,1) both,lb404Pulse 3.4s ease-in-out 1.1s infinite;box-shadow:0 10px 30px rgba(227,68,84,.32)}
+.lb-404__dot{animation:lb404Drop 1s cubic-bezier(.22,.61,.36,1) both,lb404Pulse 3.4s ease-in-out 1.1s infinite;box-shadow:0 10px 30px rgba(125,26,46,.32)}
 @media (prefers-reduced-motion:reduce){.lb-404__dot{animation:none}}
 .lb-flink{transition:color .2s cubic-bezier(.22,.61,.36,1)}
 .lb-flink:hover{color:var(--lb-rose)!important;opacity:1}
@@ -509,9 +509,9 @@ a:hover{color:var(--lb-rose);opacity:.78}
 .lb-site .lb-btn svg path{fill:var(--lb-white)}
 .lb-arrowlink__dot svg,.lb-hdr__cta-dot svg,.lb-pivot__arrow svg,.lb-obj__go svg{transform:rotate(-90deg)}
 .lb-arrowlink__dot svg path,.lb-hdr__cta-dot svg path,.lb-pivot__arrow svg path,.lb-obj__go svg path{fill:var(--lb-white)}
-.lb-site .lb-btn:hover svg{transform:rotate(-90deg) scale(1.12)!important;box-shadow:0 4px 14px rgba(227,68,84,.42)}
+.lb-site .lb-btn:hover svg{transform:rotate(-90deg) scale(1.12)!important;box-shadow:0 4px 14px rgba(125,26,46,.42)}
 .lb-site .lb-btn:active svg{transform:rotate(-90deg) scale(.96)!important}
-.lb-site .lb-btn:hover svg{box-shadow:0 6px 18px rgba(227,68,84,.45)}
+.lb-site .lb-btn:hover svg{box-shadow:0 6px 18px rgba(125,26,46,.45)}
 /* Anchored sections must clear the sticky header when reached from a deep link. */
 html{scroll-behavior:smooth}
 [id]{scroll-margin-top:clamp(90px,10vw,140px)}

@@ -85,7 +85,7 @@ export default function LeasebackPage() {
           </div>
           <div className="lb-steps3" data-reveal="" style={{ marginTop: "clamp(30px,3vw,50px)", display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: "clamp(16px,1.8vw,26px)", alignItems: "stretch" }}>
             <div className="lb-step3" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(24px,2.4vw,36px)" }}>
-              <span className="lb-soln__halo" style={{ position: "absolute", right: "-56px", top: "-56px", width: "clamp(110px,30%,150px)", aspectRatio: "1", borderRadius: "50%", background: "rgba(227,68,84,.09)" }}></span>
+              <span className="lb-soln__halo" style={{ position: "absolute", right: "-56px", top: "-56px", width: "clamp(110px,30%,150px)", aspectRatio: "1", borderRadius: "50%", background: "rgba(125,26,46,.09)" }}></span>
               <span style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "14px" }}>
                 <span style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose-tint)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "17px", color: "var(--lb-rose)" }}>01</span>
                 <span style={{ fontFamily: "var(--font-alt)", fontWeight: "300", fontSize: "14px", color: "rgba(0,0,0,.62)" }}>Le même jour</span>
@@ -123,7 +123,7 @@ export default function LeasebackPage() {
               </span>
             </div>
             <div className="lb-step3" style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "var(--r-25)", background: "var(--lb-white)", boxShadow: "var(--shadow-card)", padding: "clamp(24px,2.4vw,36px)" }}>
-              <span className="lb-soln__halo" style={{ position: "absolute", right: "-56px", top: "-56px", width: "clamp(110px,30%,150px)", aspectRatio: "1", borderRadius: "50%", background: "rgba(227,68,84,.09)" }}></span>
+              <span className="lb-soln__halo" style={{ position: "absolute", right: "-56px", top: "-56px", width: "clamp(110px,30%,150px)", aspectRatio: "1", borderRadius: "50%", background: "rgba(125,26,46,.09)" }}></span>
               <span style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "14px" }}>
                 <span style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "23px", background: "var(--lb-rose-tint)", fontFamily: "var(--font-display)", fontWeight: "700", fontSize: "17px", color: "var(--lb-rose)" }}>03</span>
                 <span style={{ fontFamily: "var(--font-alt)", fontWeight: "300", fontSize: "14px", color: "rgba(0,0,0,.62)" }}>À terme</span>
