@@ -1,4 +1,8 @@
-import { SITE_URL } from '@/lib/routes';
+/**
+ * Where the signature's own images (photo, logo, ORIAS badge) are hosted — the live
+ * Vercel deployment, not SITE_URL (leaseback.immo isn't pointed at it yet).
+ */
+const ASSET_BASE_URL = 'https://web-leaseback.vercel.app';
 
 /** Data for one team member's signature. Every field but the name and title is optional. */
 export type SignatureData = {
@@ -31,9 +35,9 @@ export const DEFAULT_SIGNATURE: SignatureData = {
   website2Label: 'www.leaseback.immo',
   address: "15 Boulevard Gabriel Guist'hau - 44000 Nantes",
   orias: '25000436',
-  photoUrl: `${SITE_URL}/signature/guillaume-delcros.png`,
-  logoUrl: `${SITE_URL}/signature/bluelease-logo.png`,
-  oriasBadgeUrl: `${SITE_URL}/signature/orias-badge.png`,
+  photoUrl: `${ASSET_BASE_URL}/signature/guillaume-delcros.png`,
+  logoUrl: `${ASSET_BASE_URL}/signature/bluelease-logo.png`,
+  oriasBadgeUrl: `${ASSET_BASE_URL}/signature/orias-badge.png`,
 };
 
 const WINE = '#7D1A2E';
