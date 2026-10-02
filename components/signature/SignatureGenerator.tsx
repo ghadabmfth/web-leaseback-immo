@@ -211,9 +211,7 @@ export function SignatureGenerator() {
               <Input data={data} set={set} field="linkedinIconUrl" label="URL de l'icône LinkedIn" placeholder="https://" />
               <p style={{ margin: 0, fontFamily: 'var(--font-alt)', fontWeight: 300, fontSize: 13, lineHeight: '20px', color: 'rgba(0,0,0,.55)' }}>
                 Les images d&rsquo;un e-mail doivent être hébergées sur une adresse publique stable — un chemin local ne
-                s&rsquo;affichera pas chez le destinataire. Remplacez la photo par la vôtre une fois mise en ligne. Le
-                logo Bluelease reste à confirmer — demandez le fichier officiel exporté depuis blue-lease.fr pour
-                remplacer celui-ci si besoin.
+                s&rsquo;affichera pas chez le destinataire. Remplacez la photo par la vôtre une fois mise en ligne.
               </p>
             </div>
           </details>

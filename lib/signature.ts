@@ -47,8 +47,8 @@ export const DEFAULT_SIGNATURE: SignatureData = {
   leasebackLogoUrl: `${ASSET_BASE_URL}/signature/leaseback-logo.png`,
   oriasBadgeUrl: `${ASSET_BASE_URL}/signature/orias-badge.png`,
   linkedinIconUrl: `${ASSET_BASE_URL}/signature/linkedin-icon.png`,
-  linkedinPersonal: '',
-  linkedinBluelease: '',
+  linkedinPersonal: 'https://www.linkedin.com/in/guillaume-delcros-3a364923/',
+  linkedinBluelease: 'https://www.linkedin.com/company/bluelease/',
   linkedinLeaseback: '',
   highlightText: '',
   highlightUrl: '',
@@ -169,7 +169,7 @@ export function buildSignatureHtml(data: SignatureData): string {
     ? `<img src="${escapeHtml(data.photoUrl.trim())}" width="84" height="84" alt="${name}" style="display:block;width:84px;height:84px;border-radius:50%;border:0;" />`
     : '';
 
-  const blueleaseLine = logoLine(data.blueleaseLogoUrl, 100, 35, data.website1.trim(), 'Bluelease', data.linkedinBluelease, data.linkedinIconUrl);
+  const blueleaseLine = logoLine(data.blueleaseLogoUrl, 100, 22, data.website1.trim(), 'Bluelease', data.linkedinBluelease, data.linkedinIconUrl);
   const leasebackLine = logoLine(data.leasebackLogoUrl, 100, 21, data.website2.trim(), 'leaseback.immo', data.linkedinLeaseback, data.linkedinIconUrl);
 
   const leftColumn =
