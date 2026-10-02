@@ -170,6 +170,27 @@ export function SignatureGenerator() {
           <Input data={data} set={set} field="address" label="Adresse" />
           <Input data={data} set={set} field="orias" label="N° ORIAS (optionnel)" placeholder="25000436" />
 
+          <div style={{ borderTop: '1px solid rgba(0,0,0,.09)', paddingTop: 20 }}>
+            <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 14, color: 'var(--lb-ink)' }}>
+              Zone d&rsquo;actualité (optionnel — affichée au-dessus de la signature)
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <Input data={data} set={set} field="highlightText" label="Texte" placeholder="Nouveau site leaseback.immo en ligne" />
+              <Input data={data} set={set} field="highlightUrl" label="Lien (optionnel)" placeholder="https://" />
+            </div>
+          </div>
+
+          <div style={{ borderTop: '1px solid rgba(0,0,0,.09)', paddingTop: 20 }}>
+            <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 14, color: 'var(--lb-ink)' }}>
+              Liens LinkedIn (optionnel)
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <Input data={data} set={set} field="linkedinPersonal" label="Profil personnel — à côté du nom" placeholder="https://www.linkedin.com/in/…" />
+              <Input data={data} set={set} field="linkedinBluelease" label="Page Bluelease — à côté de son logo" placeholder="https://www.linkedin.com/company/…" />
+              <Input data={data} set={set} field="linkedinLeaseback" label="Page leaseback.immo — à côté de son logo" placeholder="https://www.linkedin.com/company/…" />
+            </div>
+          </div>
+
           <details>
             <summary
               style={{
@@ -184,11 +205,15 @@ export function SignatureGenerator() {
             </summary>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 18 }}>
               <Input data={data} set={set} field="photoUrl" label="URL de la photo (publique)" placeholder="https://" />
-              <Input data={data} set={set} field="logoUrl" label="URL du logo (publique)" placeholder="https://" />
-              <Input data={data} set={set} field="oriasBadgeUrl" label="URL du badge ORIAS — optionnel" placeholder="https://" />
+              <Input data={data} set={set} field="blueleaseLogoUrl" label="URL du logo Bluelease (publique)" placeholder="https://" />
+              <Input data={data} set={set} field="leasebackLogoUrl" label="URL du logo leaseback.immo (publique)" placeholder="https://" />
+              <Input data={data} set={set} field="oriasBadgeUrl" label="URL du logo ORIAS — optionnel" placeholder="https://" />
+              <Input data={data} set={set} field="linkedinIconUrl" label="URL de l'icône LinkedIn" placeholder="https://" />
               <p style={{ margin: 0, fontFamily: 'var(--font-alt)', fontWeight: 300, fontSize: 13, lineHeight: '20px', color: 'rgba(0,0,0,.55)' }}>
                 Les images d&rsquo;un e-mail doivent être hébergées sur une adresse publique stable — un chemin local ne
-                s&rsquo;affichera pas chez le destinataire. Remplacez la photo par la vôtre une fois mise en ligne.
+                s&rsquo;affichera pas chez le destinataire. Remplacez la photo par la vôtre une fois mise en ligne. Le
+                logo Bluelease reste à confirmer — demandez le fichier officiel exporté depuis blue-lease.fr pour
+                remplacer celui-ci si besoin.
               </p>
             </div>
           </details>
@@ -285,9 +310,11 @@ export function SignatureGenerator() {
                 <CopyButton label="Copier le code HTML" doneLabel="Code copié ✓" onCopy={copySource} />
               </div>
               <p style={{ margin: '14px 0 0', fontFamily: 'var(--font-alt)', fontWeight: 300, fontSize: 13, lineHeight: '20px', color: 'rgba(0,0,0,.55)' }}>
-                Pour une installation manuelle : collez ce code dans l&rsquo;éditeur HTML de signature de votre client
-                de messagerie (Outlook : Fichier → Options → Courrier → Signatures ; Gmail : Paramètres → Général →
-                Signature, en collant l&rsquo;aperçu directement plutôt que le code source).
+                <strong>Apple Mail (Mac)</strong> n&rsquo;accepte pas de code source dans ses réglages de signature :
+                utilisez le bouton « Copier la signature » ci-dessus, puis collez (Cmd+V) directement dans
+                Mail → Réglages → Signatures. Le code HTML ci-dessous sert à une installation manuelle dans les
+                clients qui acceptent du code (Outlook : Fichier → Options → Courrier → Signatures ; Gmail :
+                Paramètres → Général → Signature, en collant l&rsquo;aperçu plutôt que le code source).
               </p>
             </div>
           )}

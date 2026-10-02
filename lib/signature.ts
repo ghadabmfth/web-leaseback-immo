@@ -1,10 +1,10 @@
 /**
- * Where the signature's own images (photo, logo, ORIAS badge) are hosted — the live
+ * Where the signature's own images (photo, logos, icons) are hosted — the live
  * Vercel deployment, not SITE_URL (leaseback.immo isn't pointed at it yet).
  */
 const ASSET_BASE_URL = 'https://web-leaseback.vercel.app';
 
-/** Data for one team member's signature. Every field but the name and title is optional. */
+/** Data for one team member's signature. Only the name is required — everything else is optional. */
 export type SignatureData = {
   name: string;
   title: string;
@@ -18,8 +18,15 @@ export type SignatureData = {
   address: string;
   orias: string;
   photoUrl: string;
-  logoUrl: string;
+  blueleaseLogoUrl: string;
+  leasebackLogoUrl: string;
   oriasBadgeUrl: string;
+  linkedinIconUrl: string;
+  linkedinPersonal: string;
+  linkedinBluelease: string;
+  linkedinLeaseback: string;
+  highlightText: string;
+  highlightUrl: string;
 };
 
 /** Guillaume Delcros's card, used as the generator's starting example. */
@@ -36,15 +43,23 @@ export const DEFAULT_SIGNATURE: SignatureData = {
   address: "15 Boulevard Gabriel Guist'hau - 44000 Nantes",
   orias: '25000436',
   photoUrl: `${ASSET_BASE_URL}/signature/guillaume-delcros.png`,
-  logoUrl: `${ASSET_BASE_URL}/signature/bluelease-logo.png`,
+  blueleaseLogoUrl: `${ASSET_BASE_URL}/signature/bluelease-logo.png`,
+  leasebackLogoUrl: `${ASSET_BASE_URL}/signature/leaseback-logo.png`,
   oriasBadgeUrl: `${ASSET_BASE_URL}/signature/orias-badge.png`,
+  linkedinIconUrl: `${ASSET_BASE_URL}/signature/linkedin-icon.png`,
+  linkedinPersonal: '',
+  linkedinBluelease: '',
+  linkedinLeaseback: '',
+  highlightText: '',
+  highlightUrl: '',
 };
 
 const WINE = '#7D1A2E';
 const NAVY = '#0D1B2A';
 const MUTED = '#5B6472';
-const HAIRLINE = '#E4E2DC';
+const TINT = '#F6E9EB';
 const FONT = 'Arial, Helvetica, sans-serif';
+const LABEL_WIDTH = 68;
 
 function escapeHtml(value: string): string {
   return value
@@ -62,14 +77,46 @@ function telHref(raw: string): string {
   return digits.startsWith('+') ? digits : `+33${digits.replace(/^0/, '')}`;
 }
 
+/** One contact line as a fixed-width label cell + value cell, so every value column lines up. */
 function row(label: string, valueHtml: string): string {
-  return `<tr><td style="padding:2px 0;font-family:${FONT};font-size:13px;line-height:19px;color:${NAVY};">` +
-    `<span style="font-weight:700;color:${WINE};">${escapeHtml(label)}&nbsp;</span>${valueHtml}</td></tr>`;
+  return (
+    `<tr>` +
+    `<td width="${LABEL_WIDTH}" valign="top" style="padding:2px 0;font-family:${FONT};font-size:13px;line-height:19px;font-weight:700;color:${WINE};white-space:nowrap;">${escapeHtml(label)}</td>` +
+    `<td valign="top" style="padding:2px 0;font-family:${FONT};font-size:13px;line-height:19px;color:${NAVY};">${valueHtml}</td>` +
+    `</tr>`
+  );
+}
+
+/** A small clickable LinkedIn glyph, inlined next to a name or logo — omitted entirely when no URL is set. */
+function linkedinBadge(url: string, iconUrl: string, label: string): string {
+  if (!url.trim()) return '';
+  return (
+    `<a href="${escapeHtml(url.trim())}" style="display:inline-block;vertical-align:middle;line-height:0;" aria-label="${escapeHtml(label)}">` +
+    `<img src="${escapeHtml(iconUrl.trim())}" width="16" height="16" alt="LinkedIn" style="display:block;width:16px;height:16px;border:0;" />` +
+    `</a>`
+  );
+}
+
+/** One stacked logo + its optional LinkedIn badge, both in the narrow left column. */
+function logoLine(logoUrl: string, logoWidth: number, logoHeight: number, websiteUrl: string, alt: string, linkedinUrl: string, linkedinIconUrl: string): string {
+  if (!logoUrl.trim()) return '';
+  const img = `<img src="${escapeHtml(logoUrl.trim())}" width="${logoWidth}" height="${logoHeight}" alt="${escapeHtml(alt)}" style="display:block;width:${logoWidth}px;height:${logoHeight}px;border:0;" />`;
+  const logoCell = websiteUrl.trim()
+    ? `<a href="${escapeHtml(websiteUrl.trim())}" style="display:inline-block;line-height:0;">${img}</a>`
+    : img;
+  const badge = linkedinBadge(linkedinUrl, linkedinIconUrl, `${alt} sur LinkedIn`);
+  return (
+    `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">` +
+    `<tr><td valign="middle" style="line-height:0;">${logoCell}</td>` +
+    (badge ? `<td valign="middle" style="padding-left:8px;line-height:0;">${badge}</td>` : '') +
+    `</tr></table>`
+  );
 }
 
 /**
  * Builds the email-safe signature: one table, every rule inline, no CSS/JS/SVG —
- * table-based layout is the one thing every major client (Outlook included) agrees on.
+ * table-based layout is the one thing every major client (Outlook and Apple Mail
+ * included) agrees on.
  */
 export function buildSignatureHtml(data: SignatureData): string {
   const name = escapeHtml(data.name.trim() || 'Prénom NOM');
@@ -107,48 +154,55 @@ export function buildSignatureHtml(data: SignatureData): string {
     rows.push(row('Adresse', escapeHtml(data.address.trim())));
   }
   if (data.orias.trim()) {
-    rows.push(row('ORIAS', `N&deg; ${escapeHtml(data.orias.trim())}`));
+    const icon = data.oriasBadgeUrl.trim()
+      ? `<img src="${escapeHtml(data.oriasBadgeUrl.trim())}" width="46" height="14" alt="ORIAS" style="display:inline-block;width:46px;height:14px;vertical-align:middle;border:0;margin-right:6px;" />`
+      : '';
+    rows.push(row('ORIAS', `${icon}<span style="vertical-align:middle;">N&deg; ${escapeHtml(data.orias.trim())}</span>`));
   }
 
+  const nameLinkedin = linkedinBadge(data.linkedinPersonal, data.linkedinIconUrl, `${data.name.trim() || 'Profil'} sur LinkedIn`);
   const titleRow = title
-    ? `<tr><td style="padding:2px 0 8px;font-family:${FONT};font-size:13px;line-height:18px;color:${MUTED};">${escapeHtml(title)}</td></tr>`
+    ? `<tr><td colspan="2" style="padding:2px 0 8px;font-family:${FONT};font-size:13px;line-height:18px;color:${MUTED};">${escapeHtml(title)}</td></tr>`
     : '';
 
   const photoCell = data.photoUrl.trim()
-    ? `<td width="84" valign="top" style="padding:0 20px 0 0;">` +
-      `<img src="${escapeHtml(data.photoUrl.trim())}" width="84" height="84" alt="${name}" ` +
-      `style="display:block;width:84px;height:84px;border-radius:50%;border:0;" /></td>`
+    ? `<img src="${escapeHtml(data.photoUrl.trim())}" width="84" height="84" alt="${name}" style="display:block;width:84px;height:84px;border-radius:50%;border:0;" />`
     : '';
 
-  const logoRow = data.logoUrl.trim()
-    ? `<tr><td colspan="2" style="padding-top:16px;">` +
-      `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">` +
-      `<tr><td style="border-top:1px solid ${HAIRLINE};font-size:0;line-height:0;padding-top:14px;">&nbsp;</td></tr>` +
-      `<tr><td style="padding-top:14px;" valign="middle">` +
-      `<img src="${escapeHtml(data.logoUrl.trim())}" width="130" height="46" alt="Bluelease" ` +
-      `style="display:block;width:130px;height:46px;border:0;" />` +
-      `</td>` +
-      (data.oriasBadgeUrl.trim()
-        ? `<td style="padding:0 0 0 16px;" valign="middle">` +
-          `<img src="${escapeHtml(data.oriasBadgeUrl.trim())}" width="72" height="22" alt="ORIAS" ` +
-          `style="display:block;width:72px;height:22px;border:0;" /></td>`
-        : '') +
-      `</tr></table></td></tr>`
+  const blueleaseLine = logoLine(data.blueleaseLogoUrl, 100, 35, data.website1.trim(), 'Bluelease', data.linkedinBluelease, data.linkedinIconUrl);
+  const leasebackLine = logoLine(data.leasebackLogoUrl, 100, 21, data.website2.trim(), 'leaseback.immo', data.linkedinLeaseback, data.linkedinIconUrl);
+
+  const leftColumn =
+    `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">` +
+    (photoCell ? `<tr><td style="padding-bottom:12px;line-height:0;">${photoCell}</td></tr>` : '') +
+    (blueleaseLine ? `<tr><td style="padding-bottom:8px;">${blueleaseLine}</td></tr>` : '') +
+    (leasebackLine ? `<tr><td>${leasebackLine}</td></tr>` : '') +
+    `</table>`;
+
+  const highlight = data.highlightText.trim()
+    ? `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;max-width:560px;margin-bottom:14px;">` +
+      `<tr><td style="background:${TINT};border-radius:8px;padding:9px 14px;font-family:${FONT};font-size:12px;line-height:18px;color:${WINE};">` +
+      (data.highlightUrl.trim()
+        ? `<a href="${escapeHtml(data.highlightUrl.trim())}" style="color:${WINE};text-decoration:none;font-weight:700;">${escapeHtml(data.highlightText.trim())} &rarr;</a>`
+        : `<span style="font-weight:700;">${escapeHtml(data.highlightText.trim())}</span>`) +
+      `</td></tr></table>`
     : '';
 
   return (
+    highlight +
     `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;max-width:560px;font-family:${FONT};">` +
     `<tr>` +
-    photoCell +
+    `<td width="140" valign="top" style="padding:0 20px 0 0;">${leftColumn}</td>` +
     `<td valign="top" style="border-left:2px solid ${WINE};padding:0 0 0 20px;">` +
     `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">` +
-    `<tr><td style="font-family:${FONT};font-size:19px;line-height:23px;font-weight:700;color:${WINE};">${name}</td></tr>` +
+    `<tr><td colspan="2" style="font-family:${FONT};font-size:19px;line-height:23px;font-weight:700;color:${WINE};">` +
+    `${name}${nameLinkedin ? `<span style="display:inline-block;width:8px;">&nbsp;</span>${nameLinkedin}` : ''}` +
+    `</td></tr>` +
     titleRow +
     rows.join('') +
     `</table>` +
     `</td>` +
     `</tr>` +
-    logoRow +
     `</table>`
   );
 }
